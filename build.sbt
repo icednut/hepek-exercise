@@ -3,7 +3,7 @@ import com.typesafe.sbt.web.Import.WebKeys
 
 lazy val root = (project in file("."))
   .settings(
-    scalaVersion := "2.13.3",
+    scalaVersion := "2.13.10",
     scalafmtOnCompile := true,
     libraryDependencies ++= Seq(
       "ba.sake" %% "hepek" % "0.8.5"

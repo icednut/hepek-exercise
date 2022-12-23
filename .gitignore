@@ -24,7 +24,7 @@ project/project/
 bin/
 
 # ignore everything in all target/ folders
-target/
+# target/
 
 .idea/
 root.iml
@@ -32,3 +32,5 @@ root.iml
 .bloop/
 .metals/
 .vscode/
+
+.bsp/

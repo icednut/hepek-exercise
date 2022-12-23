@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="ie=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="generator" content="hepek" /><meta name="theme-color" content="#000" /><meta name="mobile-web-app-capable" content="yes" /><meta name="og:title" content="example.com" /><title>Hello world! - example.com</title><link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" /><link rel="stylesheet" href="https://unpkg.com/bootswatch@3.3.7/readable/bootstrap.min.css" /><link rel="stylesheet" href="styles/main.css" /><style>
+      /* scrollspy stuff */
+      nav#tocScrollspy  .nav>li>a {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        font-size: .9em;
+      }
+      nav#tocScrollspy .nav .nav>li>a {
+          padding-top: 1px;
+          padding-bottom: 1px;
+          padding-left: 3em;
+          font-size: .7em;
+      }
+      
+      /* turn off affix on screens less than md */
+      @media (max-width: 992px) { 
+          .affix { position: static; }
+      }
+      @media (min-width: 1200px) {
+          /* col-2 is 16.666% but it's nicer like this */
+          .affix { width: 15%; }
+      }
+      @media (min-width: 992px) and (max-width: 1199px) {
+          /* col-3 is 25% but it's nicer like this */
+          .affix { width: 23%; }
+      }
+      @media (min-width: 992px) {
+          .affix {
+              overflow-y: auto;
+              height: 85%; /* nicer if not full height */
+          }
+      }
+    </style></head><body><div class="container-fluid"><div class="hidden-print"><nav class="navbar navbar-default navbar-fixed-top"><div class="container-fluid"><div class="navbar-header"><button type="button" class="btn navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index.html"><span><img src="images/favicon.ico" /></span> example.com</a></div><div class="collapse navbar-collapse" id="main-navbar"><ul class="nav navbar-nav navbar-left"></ul><ul class="nav navbar-nav navbar-right"><li class=""><a href="index.html">Hello world!</a></li><li class=""><a href="about.html">About</a></li></ul></div></div></nav></div><div class="row"><div class="col-lg-0 col-md-0 col-sm-0 col-xs-0 invisible"></div><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="col-lg-2 col-lg-offset-1  col-md-3  hidden-print"><nav class="affix"><ul class="nav nav-pills nav-stacked"></ul></nav></div><div class="col-lg-6                  col-md-6"><div class="hidden-print"><div><span class="glyphicon glyphicon-time"></span> 23.12.2022</div><div><span class="glyphicon glyphicon-user"></span>  John Doe</div></div><article><div><section><h3 id="first-section">First section</h3><p>This is some <em>Markdown</em>:</p>
+<ul>
+<li>yep</li>
+<li>it <strong>works</strong></li>
+<li><em>italics</em></li>
+<li><code>def code()</code></li>
+</ul>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in tempus sem, sed interdum tortor. Fusce et interdum dolor. Integer tristique lacus nunc, eget vulputate nulla porta tempor. Ut molestie eu mi pharetra gravida. Quisque sit amet nibh felis. Sed congue in ante vehicula maximus. Morbi volutpat id urna sit amet tempor. Curabitur vel diam et orci mollis tempor sed ac lacus. Aenean tempus nisi in congue sollicitudin. Morbi rhoncus nisl eget nulla suscipit, sed lacinia lorem volutpat. Suspendisse potenti. Aliquam id mi elementum, mollis mauris et, gravida nisi. Praesent nec ex quam. Suspendisse sagittis molestie nisl.</p>
+</section><section><h3 id="second-section">Second section</h3><div><div class="row"><div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">Need help from a real programming language?</div><div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">Have it check you can properly nest these rows, columns etc?</div><div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><ul><li>How</li><li>awesome</li><li>is</li><li>that?</li></ul></div></div><div class="row"><div class="col-lg-0 col-md-0 col-sm-0 col-xs-0 invisible"></div><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><p>Sections, Table of Contents, PDFs? Trivial.<br />
+Relative links with no hassle? You got it!
+<a href="about.html">Click here!</a></p>
+<p>Docs? <a href="https://sake92.github.io/hepek/index.html">here</a><br />
+Examples? <a href="https://github.com/sake92/hepek-examples">here</a></p>
+</div><div class="col-lg-0 col-md-0 col-sm-0 col-xs-0 invisible"></div></div></div></section></div></article><div id="disqus_thread" class="hidden-print"></div></div><div class="col-lg-3                  col-md-3  hidden-print hidden-sm hidden-xs"><nav id="tocScrollspy"><ul class="nav nav-pills nav-stacked"><li><a href="#first-section">First section</a><ul class="nav nav-pills nav-stacked"></ul></li><li><a href="#second-section">Second section</a><ul class="nav nav-pills nav-stacked"></ul></li></ul></nav></div></div><div class="col-lg-0 col-md-0 col-sm-0 col-xs-0 invisible"></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://unpkg.com/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script><script src="scripts/main.js"></script><script>
+            // activate scrollspy on body
+            $('body').scrollspy({
+                target: '#tocScrollspy',
+                offset: 60 // ~~ when the first heading starts...
+            });
+            
+            // fix scrollspy for current page sections
+            $('#tocScrollspy').affix({
+                offset: { top: 10 } // when to start moving fixed div
+            });
+          </script></body></html>
